@@ -2,4 +2,4 @@
 
 Enyata coding challenge.
 
-Click [here](https://ear1mobile.netlify.app) to see live result.
+Click [here](https://ammduncan.github.io/ear1/) to see live result.
