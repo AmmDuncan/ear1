@@ -116,6 +116,13 @@
         text-transform: uppercase;
         color: $color-white;
         background: $color-grey-900;
+        cursor: pointer;
+        transition: .15s ease-out;
+
+        &:hover {
+          background: #050505;
+          transform: scale(1.03);
+        }
       }
     }
   }

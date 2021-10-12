@@ -337,6 +337,12 @@ p {
   text-transform: uppercase;
   color: #ffffff;
   background: #121212;
+  cursor: pointer;
+  transition: 0.15s ease-out;
+}
+.footer .enter-email .input-holder button:hover {
+  background: #050505;
+  transform: scale(1.03);
 }
 .footer .links {
   grid-area: links;
