@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+// abstracts
+@import "abstracts/variables";
+
+// base
+@import "base/reset";
+@import "base/globals";
+@import "base/typography";
+
+// layout
+@import "layout/header";
+@import "layout/navbar";
+@import "layout/footer";
+
+// pages
+@import "pages/home";

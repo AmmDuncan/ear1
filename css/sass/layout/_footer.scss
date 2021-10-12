@@ -1,0 +1,183 @@
+.footer {
+  position: relative;
+  margin-top: 13.1rem;
+
+  .container {
+    position: relative;
+    padding: 6.3rem  0 8rem;
+    display: grid;
+    grid: "socials  " min-content
+          "input    " auto
+          "links    " auto
+          "help     " auto
+          "download " auto
+          "resources" auto/ 1fr;
+    row-gap: 4.8rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      //z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 0, 0, .15);
+    }
+  }
+
+  .icons {
+    display: grid;
+    margin-top: 2.8rem;
+    grid: 1fr / repeat(3, 4.8rem);
+    column-gap: 2.4rem;
+
+    img {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+
+  p {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    opacity: 1;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-weight: 500;
+  }
+
+  ul {
+    display: grid;
+    grid: auto-flow / 1fr;
+    row-gap: 2.4rem;
+    margin-top: 3.2rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    a {
+      display: inline-block;
+      transition: .15s ease-out;
+      transform-origin: left;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &:active {
+        transform: scale(0.995)
+      }
+    }
+  }
+
+  .socials {
+    grid-area: socials;
+  }
+
+  .enter-email {
+    grid-area: input;
+    margin-bottom: 3.2rem;
+
+    .input-holder {
+      display: grid;
+      grid: 1fr/ auto 12rem;
+      margin-top: 2.4rem;
+      //height: 5.6rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(18, 18, 18, .3);
+
+      input {
+        height: 3rem;
+        margin: 1.2rem;
+        border: none;
+        stroke: none;
+        outline: none;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-family: inherit;
+        color: rgba(0,0,0,.75);
+        width: calc(83vw - 12rem);
+      }
+
+      button {
+        border: 1px solid $color-grey-900;
+        border-bottom-right-radius: 1rem;
+        border-top-right-radius: 1rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6rem;
+        letter-spacing: calc(1rem * .2);
+        text-transform: uppercase;
+        color: $color-white;
+        background: $color-grey-900;
+      }
+    }
+  }
+
+  .links {
+    grid-area: links;
+  }
+
+  .help {
+    grid-area: help;
+  }
+
+  .download {
+    grid-area: download;
+  }
+
+  .resources {
+    grid-area: resources;
+  }
+
+  @media screen and (min-width: $screen-tab-sm) {
+    .enter-email .input-holder {
+      grid: 1fr/ auto 18rem;
+
+      input {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-tab-md) {
+    .container {
+      grid: "socials   socials  " min-content
+            "input     input    " auto
+            "links     help     " auto
+            "download  resources" auto/ 1fr 1fr;
+    }
+
+    .enter-email .input-holder  input {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: $screen-tab-lg) {
+    .container {
+      grid: "socials   input   input      input  " min-content
+            "links     links     help       help    " auto
+            "download  download  resources  resources" auto/ 1fr 1fr 1fr 1fr;
+      column-gap: 4.8rem;
+    }
+  }
+
+  @media screen and (min-width: $screen-desk-sm) {
+    .container {
+      grid: ".         input     input   input     input    " auto
+            "socials   links     help    download  resources" auto/ 28.4rem 1fr 1fr 1fr 17.2rem;
+      column-gap: 2.4rem;
+    }
+
+    .socials {
+      align-self: start;
+    }
+  }
+}
